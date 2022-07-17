@@ -6,8 +6,6 @@ import {colors} from '../../lib/theme-settings';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import {Slider} from '@miblanchard/react-native-slider';
 
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
 const Boxing = ({value, setValue, title, min, max, step, style}) => {
   return (
     <View style={[styles.boxes, {...style}]}>
@@ -25,7 +23,7 @@ const Boxing = ({value, setValue, title, min, max, step, style}) => {
           }}
           onPress={() => {
             if (value != 0) {
-              setValue(value - step);
+              setValue(parseFloat(value) - parseFloat(step));
             }
           }}>
           <Icon name={'minus'} color={colors.white1} />
@@ -39,7 +37,7 @@ const Boxing = ({value, setValue, title, min, max, step, style}) => {
             justifyContent: 'center',
             alignItems: 'center',
           }}
-          onPress={() => setValue(value + step)}>
+          onPress={() => setValue(parseFloat(value) + parseFloat(step))}>
           <Icon name={'plus'} color={colors.white1} />
         </Button>
       </View>

@@ -1,13 +1,8 @@
 import React, {useState} from 'react';
 import DefaultLayout from '../component/layout';
-import {View, StyleSheet, Switch, Dimensions} from 'react-native';
-import Texting from '../component/text';
+import {View, StyleSheet} from 'react-native';
 import {colors} from '../lib/theme-settings';
-import Button from '../component/button';
-import Icon from 'react-native-vector-icons/FontAwesome5';
-import {Slider} from '@miblanchard/react-native-slider';
-import LinearButton from '../component/button/LinearButton';
-import Linear from '../component/text/linear';
+
 import Gender from '../component/gender';
 import Boxing from '../component/box';
 import Calculate from '../component/calculate';
